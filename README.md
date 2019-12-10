@@ -1,2 +1,3 @@
-## Please install React-native expo client
+## Add data into config/data.js
+## npm install
 expo start -w (For web)
