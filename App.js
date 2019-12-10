@@ -5,13 +5,31 @@ import { data } from './config/data';
 
 const listItems = (data) => {
   return data.map((item, index) => {
+    let txt = '';
+    item.attributes ? item.attributes.map((item, key) => {
+      txt += item.str_value + ' | '
+    }) : <View></View>
     if (item.image && item.image.url) {
-      return (
-        <View key={index} style={styles.item}>
-          <img src={item.image.url} style={{ height: 200, width: 200, margin: 10, marginTop: 0, alignContent: 'center' }} />
-          <View><Text style={{ color: 'white', padding: 5 }}>{item.title}</Text></View>
-        </View>
-      )
+      if (item.format === 'MICRO_GUIDE') {
+        return (
+          <View key={index} style={styles.item}>
+            <View key={index}>
+              <Text style={{ color: 'white', margin:10 }}>{txt}</Text>
+            </View>
+          </View>
+        )
+      } else {
+        return (
+          <View key={index} style={styles.item}>
+            <img src={item.image.url} style={{ height: 150 }} />
+            <View style={{ padding: 4, marginLeft:5,marginTop:2 }}><Text style={{ color: 'white' }}>{item.title}</Text>
+              <View>
+                <Text style={{ color: 'white', padding: 2 }}>{txt}</Text>
+              </View>
+            </View>
+          </View>
+        )
+      }
     }
   })
 }

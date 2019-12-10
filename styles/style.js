@@ -24,7 +24,13 @@ const styles = StyleSheet.create({
         alignContent: 'center',
         color: 'white'
     },
-    image: { height: 200, width: 200, margin: 10, marginTop: 0, alignContent: 'center' }
+    image: { height: 150 },
+    icon: {
+        width: 25,
+        height: 25,
+        position: 'absolute',
+        right: 2
+    },
 });
 
 export { styles }
