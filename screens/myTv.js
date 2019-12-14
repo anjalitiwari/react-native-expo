@@ -19,9 +19,12 @@ const listItems = (data) => {
           </View>
         )
       } else {
+        let rest = item.image.url.substring(0, item.image.url.lastIndexOf("/") + 1);
+        let last = item.image.url.substring(item.image.url.lastIndexOf("/") + 1, item.image.url.length);
+        let imgSrc = rest + 'm/300/300/' + last;
         return (
           <View key={index} style={styles.item}>
-            <img src={item.image.url} style={{ height: 150 }} />
+            <img src={imgSrc} style={{ height: 150 }} />
             <View style={{ padding: 4, marginLeft: 5, marginTop: 2 }}><Text style={{ color: 'white' }}>{item.title}</Text>
               <View>
                 <Text style={{ color: 'white', padding: 2 }}>{txt}</Text>
