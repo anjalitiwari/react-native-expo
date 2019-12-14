@@ -1,15 +1,9 @@
 {
   "expo": {
     "name": "doitright",
-<<<<<<< HEAD
     "slug": "myTvApplication",
     "privacy": "public",
     "sdkVersion": "36.0.0",
-=======
-    "slug": "doitright-app",
-    "privacy": "public",
-    "sdkVersion": "35.0.0",
->>>>>>> 9cf8a07a5d5ebd061c621db7e634ba466f11558b
     "platforms": [
       "ios",
       "android",
